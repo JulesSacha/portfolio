@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+{# Run `composer require symfony/webpack-encore-bundle`
+and uncomment the following Encore helpers to start using Symfony UX #}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="site Portfolio">
+
+    <title>Portfolio - {% block title %}{% endblock %}</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('css/stylePanel.css') }}">
+
+
+    {% block stylesheets %}{% endblock %}
+
+
+</head>
+{#{{ encore_entry_link_tags('app') }}#}
+
+
+
+<body>
+    {% block body %}{% endblock %}
+
+
+    {% block javascripts %}{% endblock %}
+</body>
+
+</html>

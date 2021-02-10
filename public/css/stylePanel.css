@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    font-weight: lighter;
+}
+
+body{
+    background-color :#5271FF ;
+}
+
+footer{
+    
+    background-color :#5271FF ;
+
+}
+/*-------------------------Presentation-----------*/
+.cv{
+    max-width: 35%;
+    max-height: 35%;
+margin : 1em;
+
+border-radius: 20px; 
+}
+
+footer.presentation {
+    background-color :#5271FF ;
+}
+/*-------------------------competence-----------*/
+
+footer.competence{
+    background-color :#6495ED ;
+
+}

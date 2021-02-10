@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+        
+        {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to start using Symfony UX #}
+     
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="site Portfolio">
+
+    <title>Portfolio - {% block title %}{% endblock %}</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+
+    {% block stylesheets %}{% endblock %}
+    
+
+</head>
+            {#{{ encore_entry_link_tags('app') }}#}
+     
+
+     
+    <body>
+        {% block body %}{% endblock %}
+        <div class="panels">
+            
+            <div class="panel panel1">
+            <a href="{{ path('presentation') }}"><p>Présentation</p></a>
+            </div>
+          
+            <div class="panel panel2">
+              <a href="{{ path('competences') }}"><p>Compétences</p></a>
+            </div>
+         
+            <div class="panel panel3">
+              <a href="{{ path('projets') }}"><p>Projets</p></a>
+            </div>
+         
+            <div class="panel panel4">  
+              <p>Contact</p>
+            </div>
+          </div>
+
+          
+
+   {% block javascripts %}
+            {#{{ encore_entry_script_tags('app') }}#}
+
+          <script> const panels = document.querySelectorAll('.panel');
+
+function setForward() {
+  this.style.filter = "none";
+  this.classList.add('primary-panel');
+  panels.forEach(panel => behind(panel));
+}
+
+// function clickPanel(){
+//   this.classList.add('click-panel');
+// }
+
+function behind(e) {
+  if(!e.classList.contains('primary-panel')) {
+    e.style.filter = "contrast(80%)";
+  }
+}
+
+function setBackwards() {
+  this.classList.remove('primary-panel');
+}
+
+panels.forEach(panel => panel.addEventListener('mouseover',setForward));
+panels.forEach(panel => panel.addEventListener('mouseout', setBackwards));
+</script> 
+        {% endblock %}
+     </body>
+</html>

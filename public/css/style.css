@@ -1,0 +1,122 @@
+/* **************************************** RESET **************************************** */
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    font-weight: lighter;
+}
+
+/************************************************************
+
+Author: Genevieve Masioni
+Author URI : http://genevievemasioni.com
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Version: 1.0
+Tags: underwater, oceans, blue
+
+**************************************************************
+
+Table of Contents:
+
+  0. GLOBAL
+  1. PANELS
+  2. PRIMARY PANEL
+
+**************************************************************/
+
+
+/************************************************
+0.	GLOBAL
+************************************************/
+:root {
+    --base-font: 'Open sans', 'Montserrat', sans-serif;
+  }
+  
+  html, body {
+    font-size: 16px;
+  }
+  
+  /* body {
+    color: #ffffff;
+    margin: 0;
+    font-family: var(--base-font);
+    font-weight: bold;
+    background: #04031d;
+  } */
+  
+  /************************************************
+  1.	PANELS
+  ************************************************/
+  
+  .panel, .panel > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .panels {
+    display: flex;
+    min-height: 100vh;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .panel {
+    flex-direction: row ;
+    flex: 1;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    font-size: 1.5rem;
+    transition: ease 0.1s;
+  }
+  
+  .panel > * {
+    text-shadow: .1rem .1rem .2rem rgb(25, 10, 161);
+    flex: 1 0 auto;
+  }
+  
+  .panel p:nth-child(2) {
+    font-size: 3rem;
+  }
+  
+  .panel p:nth-child(2n+1) {
+    display: none;
+  }
+  
+  .panel1 {
+    background-color :#5271FF ;
+  }
+  
+  
+  .panel2 {
+    background-color :#6495ED ;
+  }
+  
+  .panel3 {
+    background-color :	#87CEFA ;
+  }
+  
+  .panel4 {
+    background-color : 	#ADD8E6;
+  }
+  
+  /************************************************
+  2.	PRIMARY PANEL
+  ************************************************/
+  
+  .primary-panel {
+    flex: 2;
+  }
+  .click-panel {
+    flex: 6;
+  }
+  
+  .primary-panel p:nth-child(2n+1) {
+    display: inline;
+  }
+  
